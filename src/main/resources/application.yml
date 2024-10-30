@@ -1,0 +1,20 @@
+server:
+  port: ${SERVER_PORT:8082}
+
+jwt.secret : d1941bcb7feec8303c66a8415e97a13c4d4388ba
+
+spring:
+  # Database
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwtauth
+    username: thangavel
+    password: password
+    driverClassName: org.postgresql.Driver
+
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-dll: true
+    hibernate:
+      ddl-auto: create
